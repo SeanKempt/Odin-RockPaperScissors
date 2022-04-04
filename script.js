@@ -1,15 +1,12 @@
-const choices = [`Rock`, `Paper`, `Scissors`];
-let computerSelection;
-let playerSelection;
-let playerScore = 0;
-let computerScore = 0;
-
 /* Function computerPlay to return `Rock` `Paper` or `Scissors` randomly. */
+let computerSelection;
+const choices = [`Rock`, `Paper`, `Scissors`];
 function computerPlay (){
     computerSelection = choices[Math.floor(Math.random() * choices.length)];
     computerSelection = computerSelection.toUpperCase();
 }
 
+let playerSelection;
 function playerChoice () {
     playerSelection = prompt(`What is your Choice?`);
     playerSelection = playerSelection.toUpperCase();
@@ -51,6 +48,8 @@ function game (){
     }
 }
 
+let playerScore = 0;
+let computerScore = 0;
 function gameWinner(){
     if (playerScore < computerScore) {
         console.log(`You lose! with a score of ${playerScore} Try again!`);
