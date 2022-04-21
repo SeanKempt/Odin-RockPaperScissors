@@ -1,4 +1,7 @@
 /* Function computerPlay to return `Rock` `Paper` or `Scissors` randomly. */
+function restoreGame() {
+  window.location.reload();
+}
 let computerSelection;
 const choices = [`Rock`, `Paper`, `Scissors`];
 function computerPlay() {
@@ -60,14 +63,12 @@ let computer = document.querySelector("#computer");
 let playerScore = 0;
 let computerScore = 0;
 function gameWinner() {
-  if (playerScore < computerScore) {
-    console.log(`You lose! with a score of ${playerScore} Try again!`);
-  } else if (computerScore < playerScore) {
-    console.log(
-      `You Win! with a score of ${playerScore} You are the greatest!`
-    );
-  } else {
-    console.log(`Something broke!`);
+  if (playerScore < computerScore && computerScore === 5) {
+    alert(`You lose! with a score of ${playerScore} Try again!`);
+    restoreGame();
+  } else if (computerScore < playerScore && playerScore === 5) {
+    alert(`You Win! with a score of ${playerScore} You are the greatest!`);
+    restoreGame();
   }
 }
 
@@ -78,6 +79,7 @@ gameChoices.forEach((choice) => {
     playerChoice(choice.value);
     playRockPaperScissors(playerSelection, computerSelection);
     updateScore();
+    gameWinner();
   });
 });
 
