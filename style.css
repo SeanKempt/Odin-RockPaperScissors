@@ -6,3 +6,8 @@ body {
     display: flex;
     justify-content: center;
 }
+
+.resultsContainer {
+    display: flex;
+    flex-direction: column;
+}
