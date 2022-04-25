@@ -1,14 +1,24 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Roboto,"JetBrains Mono",monospace;
+}
+
+.title {
+    text-align: center;
 }
 .choiceContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 10em;
 }
 
+.description {
+    text-align: center;
+}
 .choice {
-    margin: 10em;
+    margin: 1em;
     border-radius: 15px;
     align-items: center;
     appearance: none;
@@ -20,7 +30,6 @@ body {
     color: #36395A;
     cursor: pointer;
     display: inline-flex;
-    font-family: "JetBrains Mono",monospace;
     height: 48px;
     justify-content: center;
     line-height: 1;
@@ -49,5 +58,57 @@ body {
 
 .resultsContainer {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    margin-top: 10em;
 }
+
+.pointsBoard {
+    display: flex;
+    justify-content: center;
+}
+
+#computer {
+    font-size: 25px;
+}
+#player {
+    margin-left: 10em;
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 500px) {
+    /* For mobile phones: */
+    .choiceContainer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2em;
+    }
+
+    .resultsContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+    }
+
+    .pointsBoard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #player {
+        font-size: 25px;
+        margin-left: 0;
+        align-self: center;
+    }
+
+    #computer {
+        font-size: 25px;
+        align-self: center;
+    }
+
+    #rpsWinner {
+        align-self: center;
+    }
+  }
