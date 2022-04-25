@@ -1,9 +1,11 @@
+//Refreshes the page to restart the game after clicking okay on the game over alert.
 function restoreGame() {
   window.location.reload();
 }
 
 let computerSelection;
 const computerChoices = [0, 1, 2];
+
 /* Function computerPlay to return `Rock` `Paper` or `Scissors` randomly. */
 function computerPlay() {
   computerSelection =
@@ -65,12 +67,3 @@ function updateScore() {
   player.textContent = `Player: ${playerScore}`;
   computer.textContent = `Computer: ${computerScore}`;
 }
-
-//Plays game five times ----
-// function game (){
-//     for(let i = 0; i < 5; i++) {
-//     playerChoice();
-//     computerPlay();
-//     playRockPaperScissors(playerSelection, computerSelection);
-//     }
-// }
